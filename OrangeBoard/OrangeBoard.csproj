@@ -127,10 +127,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="c1.aspx" />
+    <Content Include="c2.aspx" />
+    <Content Include="c3.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="course1.aspx" />
     <Content Include="css\default.css" />
     <Content Include="css\font-awesome\css\font-awesome.css" />
     <Content Include="css\font-awesome\css\font-awesome.min.css" />
@@ -257,6 +259,7 @@
     <Content Include="instructor.aspx" />
     <Content Include="js\contact form cevee.htnl" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="images\background.jpg" />
     <Content Include="images\background1.jpg" />
@@ -325,12 +328,26 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="course1.aspx.cs">
-      <DependentUpon>course1.aspx</DependentUpon>
+    <Compile Include="c1.aspx.cs">
+      <DependentUpon>c1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="course1.aspx.designer.cs">
-      <DependentUpon>course1.aspx</DependentUpon>
+    <Compile Include="c1.aspx.designer.cs">
+      <DependentUpon>c1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="c2.aspx.cs">
+      <DependentUpon>c2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="c2.aspx.designer.cs">
+      <DependentUpon>c2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="c3.aspx.cs">
+      <DependentUpon>c3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="c3.aspx.designer.cs">
+      <DependentUpon>c3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -359,6 +376,7 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
@@ -379,6 +397,7 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -390,10 +409,19 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="course1\" />
+    <Folder Include="course2\" />
+    <Folder Include="course3\" />
     <Folder Include="images\projects\" />
   </ItemGroup>
   <ItemGroup>

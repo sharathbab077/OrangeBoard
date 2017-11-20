@@ -10,7 +10,7 @@
 namespace OrangeBoard {
     
     
-    public partial class course1 {
+    public partial class WebForm2 {
         
         /// <summary>
         /// form2 control.

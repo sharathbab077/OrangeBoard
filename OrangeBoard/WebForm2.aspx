@@ -1,4 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="course1.aspx.cs" Inherits="OrangeBoard.course1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="OrangeBoard.WebForm2" %>
+
+
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -6,7 +8,7 @@
 		<!--- Basic Page Needs
 			================================================== -->
 		<meta charset="utf-8">
-		<title>Orange Board</title>
+		<title>Flash Card App</title>
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<!-- Mobile Specific Metas
@@ -25,7 +27,6 @@
 		<!-- Script
 			================================================== -->
 		<script src="js/modernizr.js"></script>
-        
 		
 		<!-- Favicons
 			================================================== -->
@@ -50,7 +51,7 @@
 				<div class="row banner">
 					<div class="banner-text">
 						<h1>
-							Orange Board
+							FLASH CARDS
 							<span class="wrapper"></span>
 						</h1>
 						<hr />
@@ -65,9 +66,7 @@
 			<!-- Info Section
 				================================================== -->
 			<section id="resume">
-				<div class="container">
-<hr />
-				</div>
+				
 			</section>
 			<!-- Resume Section End-->
 			<!-- project Section
@@ -123,3 +122,14 @@
 		</form>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

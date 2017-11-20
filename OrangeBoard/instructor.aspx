@@ -77,15 +77,15 @@
 
           <div class="twelve columns">
 
-            <h3>Courses</h3>
+            
             
               
             <p>
               
-                <asp:Button ID="Button1" runat="server" Text="Courses" OnClick="Button1_Click" />
+                <p>Hi, You have two courses</p>
                 
-                <asp:Button ID="Button2" runat="server" Text="Upload Assignment" OnClick="Button2_Click" />
-                <asp:Button ID="Button3" runat="server" Text="View Assignment" OnClick="Button3_Click" />
+                <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Course-1" />
+                <asp:Button ID="Button3" runat="server" Text="Course-2" OnClick="Button3_Click" />
               
 
              </p>

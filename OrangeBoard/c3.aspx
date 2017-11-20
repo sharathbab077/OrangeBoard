@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="template.aspx.cs" Inherits="OrangeBoard.template" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="c3.aspx.cs" Inherits="OrangeBoard.c3" %>
 
 
 
@@ -62,22 +62,120 @@
 				</p>
 				<hr/>
 			</header>
-			<!-- Header End -->
-			<!-- Info Section
-				================================================== -->
-			<section id="resume">
-				<div class="container">
-					
+		
+
+            	<section id="resume">
+				<div class="row work">
+
+      <div class="three columns header-col">
+        <h1><span>Courses</span></h1>
+        
+      </div>
+
+      <div class="nine columns main-col">
+
+        <div class="row item">
+
+          <div class="twelve columns">
+              <h3>Software Engineering</h3>
+              <div class="well well-lg">
+                  <p>
+                      <i><b>
+                          Location</b> :-Life Science Building,Syracuse University<br />
+                     </i>
+                      <i>
+                          <b>Day of the week</b>:-Monday and Wednesday <br />
+                          <b>Timings</b>:-10.00 A.M-12.00 A.M 
+                      </i>
+                  </p>
 
 
+              </div>
+              <div class="container">
+                  <h3>Send Message</h3>
+                  <textarea id="c3txtarea" cols="20" rows="2"></textarea>
+                  <asp:Button ID="notifybtnc3" runat="server" Text="Notify" />
+
+
+
+              </div>
+              <hr />
+              <div class="container">
+                  <h3>
+                      View Discussions
+                  </h3>
+                  <asp:Button ID="discc3btn" runat="server" Text="Discussions" />
+
+              </div>
+              <hr />
+                <h3>Upload and Download Content of this course</h3>
+              <div class="container">
+                  <div class="row">
+					<div class="col-md-6">
+                    <asp:FileUpload ID="FileUpload3" runat="server" />
+                        </div>
+        <asp:Button ID="c3btn" runat="server" OnClick="c3uploadbtn" Text="Upload" />
+                      </div>
+                  <div class="col-md-12">
+                      
+                         <i> View and Download course files here.</i>
+                      
+        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" OnRowCommand="GridView3_RowCommand" OnSelectedIndexChanged="GridView3_SelectedIndexChanged" CellSpacing="2" ForeColor="Black">
+            <Columns>
+                <asp:TemplateField HeaderText="File">
+                    <ItemTemplate>
+                        <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# Eval("File") %>' CommandName="Download" Text='<%# Eval("File") %>'></asp:LinkButton>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:BoundField DataField="Size" HeaderText="Size" />
+                <asp:BoundField DataField="Type" HeaderText="Filetype" />
+            </Columns>
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+            <RowStyle BackColor="White" />
+            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
+        </asp:GridView>
+                  </div>
 
 
 				</div>
+
+
+
+              </div>
+            </div>
+          </div>
+                    </div>
+
 			</section>
-			<!-- Resume Section End-->
-			<!-- project Section
-				================================================== -->
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<section id="About">
 			</section>
 			
