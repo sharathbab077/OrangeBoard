@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace OrangeBoard
 {
-    public partial class student : System.Web.UI.Page
+    public partial class studentcourse : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
