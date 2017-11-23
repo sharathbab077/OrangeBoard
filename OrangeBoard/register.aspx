@@ -69,7 +69,26 @@
 			<!-- Info Section
 				================================================== -->
 			<section id="resume">
-			
+			<div class=" row work">
+                <div class="three columns header-col">
+
+
+                </div>
+
+                <div class="nine columns main-col">
+                    <div class="row item">
+                        <div class="twelve columns">
+
+                        </div>
+
+                    </div>
+                    <!--item end -->
+
+                </div>
+
+
+
+			</div>
 					
 
 

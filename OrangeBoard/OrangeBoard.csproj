@@ -256,6 +256,9 @@
     <Content Include="css\fonts\roboto\Roboto-Thin.woff" />
     <Content Include="css\fonts\roboto\Roboto-Thin.woff2" />
     <Content Include="homepage.aspx" />
+    <Content Include="images\college.jpg" />
+    <Content Include="images\complexitychecker.jpeg" />
+    <Content Include="images\otto.png" />
     <Content Include="instructor.aspx" />
     <Content Include="js\contact form cevee.htnl" />
     <Content Include="register.aspx" />

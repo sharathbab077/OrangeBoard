@@ -66,16 +66,68 @@
 			<!-- Info Section
 				================================================== -->
 			<section id="resume">
-                <hr />
-				<h3>View Discussions</h3>
-                <div class="container">
-                    <asp:Button ID="Button1" runat="server" Text="View Discussion" />
+                <div class=" row work">
+                <div class="three columns header-col">
+                    <h3>View Discussions</h3>
 
                 </div>
-                <div class="container">
 
-                      <asp:Button ID="Button2" runat="server" Text="Upload Assignment" />
+                <div class="nine columns main-col">
+                    <div class="row item">
+                        <div class="twelve columns">
+                              <asp:Button ID="Button1" runat="server" Text="View Discussion" />
+                        </div>
+                        
+
+                    </div>
+
+
+
+
+                    <!--item end -->
+
                 </div>
+ <div class="three columns header-col">
+                    <h3>Upload Assignment</h3>
+
+                </div>
+                     <div class="nine columns main-col">
+                    <div class="row item">
+                        <div class="twelve columns">
+                               <asp:Button ID="Button2" runat="server" Text="Upload Assignment" />
+                        </div>
+                        
+
+                    </div>
+
+
+
+
+                    <!--item end -->
+
+                </div>
+
+
+
+
+
+                    
+
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+				
                 <hr />
 			</section>
 			<!-- Resume Section End-->

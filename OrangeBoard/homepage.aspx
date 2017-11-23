@@ -139,7 +139,7 @@
                                 <div class="item-wrap">
 
                                     <a href="#modal-01" title="">
-                                        <img alt="" src="images/projects/ai.png">
+                                        <img class="img-responsive" alt="" src="images/otto.png">
                                         <div class="overlay">
                                             <div class="project-item-meta">
                                                 <h5>Complexity Checker</h5>
@@ -157,7 +157,8 @@
                                 <div class="item-wrap">
 
                                     <a href="#modal-02" title="">
-                                        <img class="img-responsive" alt="" src="images/projects/cloud.jpg">
+                                        
+                                        <img class="img-responsive" alt="" src="images/otto.png">
                                         <div class="overlay">
                                             <div class="project-item-meta">
                                                 <h5>Complexity Checker</h5>
@@ -175,7 +176,7 @@
                                 <div class="item-wrap">
 
                                     <a href="#modal-03" title="">
-                                        <img alt="" src="images/projects/keyvaluedb.png">
+                                        <img class="img-responsive" alt="" src="images/otto.png">
                                         <div class="overlay">
                                             <div class="project-item-meta">
                                                 <h5>SMS Notifications</h5>
@@ -193,7 +194,7 @@
                                 <div class="item-wrap">
 
                                     <a href="#modal-03" title="">
-                                        <img alt="" src="images/projects/keyvaluedb.png">
+                                        <img class="img-responsive" alt="" src="images/otto.png">
                                         <div class="overlay">
                                             <div class="project-item-meta">
                                                 <h5>Chat Bot</h5>

@@ -66,47 +66,64 @@
 
             	<section id="resume">
 				<div class="row work">
-
-      <div class="three columns header-col">
-        <h1><span>Courses</span></h1>
-        
-      </div>
-
-      <div class="nine columns main-col">
-
-        <div class="row item">
-
-          <div class="twelve columns">
-              <h3>Software Engineering</h3>
-              <div class="well well-lg">
-                  <p>
-                      <i><b>
-                          Location</b> :-Life Science Building,Syracuse University<br />
-                     </i>
-                      <i>
-                          <b>Day of the week</b>:-Monday and Wednesday <br />
-                          <b>Timings</b>:-10.00 A.M-12.00 A.M 
-                      </i>
-                  </p>
-
-
-              </div>
-              <div class="container">
+                    <div class="three columns header-col">
+                  <h1><span>Courses</span></h1>
+                  <div class="container">
+                     <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Courses
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                           <li><a href="#"> CIS Software Engineering</a></li>
+                           <li><a href="#">DataBase</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="nine columns main-col">
+                  <div class="row item">
+                     <div class="twelve columns">
+                        <h3>Software Engineering</h3>
+                        <div class="well well-lg">
+                           <p>
+                              <i><b>
+                              Location</b> :-Life Science Building,Syracuse University<br />
+                              </i>
+                              <i>
+                              <b>Day of the week</b>:-Monday and Wednesday <br />
+                              <b>Timings</b>:-10.00 A.M-12.00 A.M 
+                              </i>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="three columns header-col">
                   <h3>Send Message</h3>
-                  <textarea id="c3txtarea" cols="20" rows="2"></textarea>
-                  <asp:Button ID="notifybtnc3" runat="server" Text="Notify" />
+               </div>
+               <div class="nine columns main-col">
+                  <div class="row item">
+                     <div class="twelve columns">
+                        <textarea id="c3txtarea" cols="20" rows="2"></textarea>
+                        <asp:Button ID="notifybtnc3" runat="server" Text="Notify" />
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="three columns header-col">
+                  <h3>View Discussions</h3>
+               </div>
+               <div class="nine columns main-col">
+                  <div class="row item">
+                     <div class="twelve columns">
+                        <asp:Button ID="discc3btn" runat="server" Text="Discussions" />
+                     </div>
+                  </div>
+               </div>
+               <hr />
 
 
 
-              </div>
-              <hr />
-              <div class="container">
-                  <h3>
-                      View Discussions
-                  </h3>
-                  <asp:Button ID="discc3btn" runat="server" Text="Discussions" />
 
-              </div>
               <hr />
                 <h3>Upload and Download Content of this course</h3>
               <div class="container">

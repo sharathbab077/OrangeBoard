@@ -65,16 +65,36 @@
 			<!-- Info Section
 				================================================== -->
 			<section id="resume">
-				<div class="container">
-					
-                    <asp:Button ID="Button1" runat="server" Text="Software Engineering" />
-                    <asp:Button ID="Button2" runat="server" Text="OOD" />
-                    <asp:Button ID="Button3" runat="server" Text="Mobile Development" />
+
+                
+			<div class=" row work">
+                <div class="three columns header-col">
+                    <h3>Courses</h3>
+
+                </div>
+
+                <div class="nine columns main-col">
+                    <div class="row item">
+                        <div class="twelve columns">
+
+                             <asp:Button ID="Button1" runat="server" Text="Software Engineering" /> 
+                            <br />
+                            
+                    <asp:Button ID="Button3" runat="server" Text="Mobile Development" /> <br />
+                            <asp:Button ID="Button2" runat="server" Text="OOD" />
+
+                        </div>
+
+                    </div>
+                    <!--item end -->
+
+                </div>
 
 
 
-				</div>
-			</section>
+			</div>
+			
+				</section>
             
 			<!-- Resume Section End-->
 			<!-- project Section
