@@ -104,8 +104,9 @@
                <div class="nine columns main-col">
                   <div class="row item">
                      <div class="twelve columns">
-                        <textarea id="c2txtarea" cols="20" rows="2"></textarea>
-                        <asp:Button ID="notifybtnc2" runat="server" Text="Notify" />
+                        
+                         <asp:TextBox ID="c2txtarea"  cols="20" rows="2" runat="server"></asp:TextBox>
+                        <asp:Button ID="notifybtnc2" runat="server" Text="Notify" OnClick="notifybtnc2_Click" />
                      </div>
                   </div>
                </div>

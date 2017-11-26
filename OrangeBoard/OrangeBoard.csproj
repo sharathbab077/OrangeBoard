@@ -127,6 +127,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\email.mdf" />
+    <Content Include="App_Data\email_log.ldf">
+      <DependentUpon>email.mdf</DependentUpon>
+    </Content>
     <Content Include="c1.aspx" />
     <Content Include="c2.aspx" />
     <Content Include="c3.aspx" />
@@ -264,8 +268,6 @@
     <Content Include="register.aspx" />
     <Content Include="studentcourse.aspx" />
     <Content Include="studenthomepage.aspx" />
-    <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="images\background.jpg" />
     <Content Include="images\background1.jpg" />
@@ -405,23 +407,8 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="course1\" />
     <Folder Include="course2\" />
     <Folder Include="course3\" />

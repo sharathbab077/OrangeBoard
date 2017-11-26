@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 
 using System.IO;
 using System.Data;
+using System.Net.Mail;
+using System.Data.SqlClient;
 
 namespace OrangeBoard
 {
@@ -27,6 +29,12 @@ namespace OrangeBoard
                 Response.TransmitFile(Server.MapPath("~/course1/") + e.CommandArgument);
                 Response.End();
             }
+        }
+        public class courseonerecpients
+        {
+            public int id { get; set; }
+            public string name { get; set; }
+            public string email { get; set; }
         }
 
         protected void c1uploadbtn(object sender, EventArgs e)
@@ -56,5 +64,79 @@ namespace OrangeBoard
 
         }
 
+        protected void notifybtnc1_Click(object sender, EventArgs e)
+        {
+            
+            SqlDataReader rdr = null;
+
+            // create a connection object
+            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = F:\\3sem\\senew\\OrangeBoard\\OrangeBoard\\App_Data\\email.mdf; Integrated Security = True");
+
+            // create a command object
+            SqlCommand cmd = new SqlCommand("SELECT name,emailid from dbo.student", conn);
+
+            try
+            {
+                // open the connection
+                conn.Open();
+
+                // get an instance of the SqlDataReader
+                rdr = cmd.ExecuteReader();
+
+                var emails = new List<courseonerecpients>();
+                while (rdr.Read())
+                {
+                    
+                    emails.Add(new courseonerecpients
+                    {
+
+                        name = rdr["name"].ToString(),
+                        email = rdr["emailid"].ToString(),
+
+                       
+                    });
+                }
+
+                foreach (courseonerecpients email in emails)
+                {
+                    const string username = "";
+                    const string password = "";
+                    SmtpClient smtpClient = new SmtpClient();
+                    MailMessage mail = new MailMessage();
+                    MailAddress fromaddress = new MailAddress("s.sachin2911@gmail.com", "Sachin S");
+                    smtpClient.Host = "smtp.gmail.com";
+                    smtpClient.Port = 587;
+                    mail.From = fromaddress;
+                    mail.To.Add(email.email);
+                    mail.Subject = ("Course One");
+                    mail.IsBodyHtml = false;
+                    string notifytext = c1txtarea.Text;
+                    mail.Body = notifytext;
+                    smtpClient.EnableSsl = true;
+                    smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    smtpClient.Credentials = new System.Net.NetworkCredential(username, password);
+                    smtpClient.Send(mail);
+                }
+                
+            }
+
+            finally
+            {
+                // close the reader
+                if (rdr != null)
+                {
+                    rdr.Close();
+                }
+
+                // close the connection
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+
+
     }
-}
+    }

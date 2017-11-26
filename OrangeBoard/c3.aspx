@@ -103,8 +103,9 @@
                <div class="nine columns main-col">
                   <div class="row item">
                      <div class="twelve columns">
-                        <textarea id="c3txtarea" cols="20" rows="2"></textarea>
-                        <asp:Button ID="notifybtnc3" runat="server" Text="Notify" />
+                        
+                         <asp:TextBox ID="c3txtarea"  cols="20" rows="2" runat="server"></asp:TextBox>
+                        <asp:Button ID="notifybtnc3" runat="server" Text="Notify" OnClick="notifybtnc3_Click" />
                      </div>
                   </div>
                </div>
