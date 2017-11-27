@@ -46,7 +46,7 @@
 					    <li><a class="smoothscroll" href="#project">Lessons</a></li>
                         <li><a class="smoothscroll" href="#project">Lessons</a></li>
 
-                         <li id="hide" runat="server">  <a class="smoothscroll" href="StudentCareerInfo.aspx">Please Click here to fill career services form:</a></li>    
+                         <li>  <a class="smoothscroll" href="c1.aspx">Career services form:</a></li>    
                       
                     </ul>
 					<!-- end #nav -->

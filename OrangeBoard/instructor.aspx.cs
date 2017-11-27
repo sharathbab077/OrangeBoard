@@ -31,7 +31,7 @@ namespace OrangeBoard
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            Response.Redirect("course1.aspx");
+            Response.Redirect("c1.aspx");
         }
     }
 }

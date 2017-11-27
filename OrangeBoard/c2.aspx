@@ -43,7 +43,8 @@
 						<li><a class="smoothscroll" href="#info">About</a></li>
 						<li><a class="smoothscroll" href="#project">Lessons</a></li>
 					    <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                        <li><a class="smoothscroll" href="#project">Lessons</a></li>
+                        <li><a class="smoothscroll" href="c1.aspx">Lessons</a></li>
+                       <li> <asp:LinkButton ID="LinkButton1" OnClick="linkbuttonclick" runat="server">LinkButton</asp:LinkButton></li>
                     </ul>
 					<!-- end #nav -->
 				</nav>
@@ -104,8 +105,9 @@
                <div class="nine columns main-col">
                   <div class="row item">
                      <div class="twelve columns">
-                        <textarea id="c2txtarea" cols="20" rows="2"></textarea>
-                        <asp:Button ID="notifybtnc2" runat="server" Text="Notify" />
+                        
+                         <asp:TextBox ID="ctwotxtarea"  cols="20" rows="2" runat="server"></asp:TextBox>
+                        <asp:Button ID="notifybtnc2" runat="server" Text="Notify" OnClick="notifybtnc2_Click" />
                      </div>
                   </div>
                </div>
