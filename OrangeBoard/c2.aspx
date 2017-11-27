@@ -43,7 +43,8 @@
 						<li><a class="smoothscroll" href="#info">About</a></li>
 						<li><a class="smoothscroll" href="#project">Lessons</a></li>
 					    <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                        <li><a class="smoothscroll" href="#project">Lessons</a></li>
+                        <li><a class="smoothscroll" href="c1.aspx">Lessons</a></li>
+                       <li> <asp:LinkButton ID="LinkButton1" OnClick="linkbuttonclick" runat="server">LinkButton</asp:LinkButton></li>
                     </ul>
 					<!-- end #nav -->
 				</nav>

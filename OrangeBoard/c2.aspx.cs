@@ -64,6 +64,12 @@ namespace OrangeBoard
             public string name { get; set; }
             public string email { get; set; }
         }
+
+        protected void linkbuttonclick(object sender, EventArgs e)
+        {
+            Response.Redirect("c1.aspx");
+        }
+
         protected void notifybtnc2_Click(object sender, EventArgs e)
         {
 
