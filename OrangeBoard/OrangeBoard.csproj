@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Clockwork, Version=2.0.0.19839, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Clockwork.2.0.0\lib\net45\Clockwork.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -127,9 +130,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\OrangeBoard.mdf" />
+    <Content Include="App_Data\OrangeBoardDatabase.mdf" />
+    <Content Include="App_Data\OrangeBoardDatabase_log.ldf">
+      <DependentUpon>OrangeBoardDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\OrangeBoard_log.ldf">
+      <DependentUpon>OrangeBoard.mdf</DependentUpon>
+    </Content>
     <Content Include="c1.aspx" />
     <Content Include="c2.aspx" />
     <Content Include="c3.aspx" />
+    <Content Include="CareerServices.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -164,6 +176,7 @@
     <Content Include="css\materialize.min.css" />
     <Content Include="css\media-queries.css" />
     <Content Include="css\nextpage.css" />
+    <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -261,7 +274,9 @@
     <Content Include="images\otto.png" />
     <Content Include="instructor.aspx" />
     <Content Include="js\contact form cevee.htnl" />
+    <Content Include="js\index.js" />
     <Content Include="register.aspx" />
+    <Content Include="StudentCareerInfo.aspx" />
     <Content Include="studentcourse.aspx" />
     <Content Include="studenthomepage.aspx" />
     <Content Include="WebForm1.aspx" />
@@ -352,6 +367,13 @@
     <Compile Include="c3.aspx.designer.cs">
       <DependentUpon>c3.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CareerServices.aspx.cs">
+      <DependentUpon>CareerServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CareerServices.aspx.designer.cs">
+      <DependentUpon>CareerServices.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -376,6 +398,13 @@
     </Compile>
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCareerInfo.aspx.cs">
+      <DependentUpon>StudentCareerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentCareerInfo.aspx.designer.cs">
+      <DependentUpon>StudentCareerInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="studentcourse.aspx.cs">
       <DependentUpon>studentcourse.aspx</DependentUpon>
@@ -421,7 +450,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="course1\" />
     <Folder Include="course2\" />
     <Folder Include="course3\" />
@@ -430,6 +458,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="scss\style.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

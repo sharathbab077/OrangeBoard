@@ -90,25 +90,24 @@
 
                                     <div class="form-group">
                                         <div class="col-md-6">
-                                            <asp:Label ID="username" runat="server" Text="EmailId:"></asp:Label>
+                                            <asp:Label ID="lbl" runat="server" Text="SUID:"></asp:Label>
                                             <div class="col-md-6">
-                                                <input type="email" class="form-control" id="email" placeholder="Enter email" type="text" />
-                                            </div>
+                                                <asp:TextBox ID="txtboxsuid" runat="server" required="required" Width="295px"></asp:TextBox>   
                                         </div>
 
                                         <div class="col-md-6">
                                             <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input id="Password1" class="form-control" placeholder="Enter password" type="password" />
-
+                                             <asp:TextBox ID="txtPassword" runat="server" CausesValidation="True" required="required" TextMode="Password" Width="295px"></asp:TextBox>
+                      
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10">
                                             <asp:Button ID="Button1" class="btn btn-default" runat="server" Text="Login" OnClick="Button1_Click" />
-                                            <asp:Button ID="Button2" class="btn btn-default" runat="server" Text="Register" />
+                                            <asp:Button ID="Button2" class="btn btn-default" runat="server" Text="Register" OnClick="Button2_Click" />
                                         </div>
 
                                     </div>

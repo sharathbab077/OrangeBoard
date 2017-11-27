@@ -30,6 +30,7 @@
 		<!-- Favicons
 			================================================== -->
 		<link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<form id="form2" runat="server">
@@ -40,9 +41,13 @@
 					<ul id="nav" class="nav">
 						<li class="current"><a class="smoothscroll" href="#home">Home</a></li>
 						<li><a class="smoothscroll" href="#info">About</a></li>
+                  
 						<li><a class="smoothscroll" href="#project">Lessons</a></li>
 					    <li><a class="smoothscroll" href="#project">Lessons</a></li>
                         <li><a class="smoothscroll" href="#project">Lessons</a></li>
+
+                         <li id="hide" runat="server">  <a class="smoothscroll" href="StudentCareerInfo.aspx">Please Click here to fill career services form:</a></li>    
+                      
                     </ul>
 					<!-- end #nav -->
 				</nav>
@@ -145,6 +150,9 @@
 			<script src="js/magnific-popup.js"></script>
 			<script src="js/init.js"></script>
 			<script src="js/doughnut.js"></script>
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script  src="js/index.js"></script>
 			<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 			<script type="text/javascript" src="js/materialize.min.js"></script>
 		</form>
