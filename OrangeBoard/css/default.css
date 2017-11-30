@@ -1204,8 +1204,7 @@ input[type="checkbox"] {
     position: relative;
     right: 10;
     bottom: 10;
-    width:
-    background-image: url("../images/goal.png");
+    width: background-image: url("../images/goal.png");
     background-repeat: no-repeat;
 }
 
