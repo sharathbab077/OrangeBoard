@@ -38,9 +38,8 @@
                <ul id="nav" class="nav">
                   <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
                   <li><a class="smoothscroll" href="#info">About</a></li>
-                  <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                  <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                  <li><a class="smoothscroll" href="#project">Lessons</a></li>
+                  <li><a class="smoothscroll" href="#resume">Lessons</a></li>
+                  
                </ul>
                <!-- end #nav -->
             </nav>
@@ -66,16 +65,7 @@
             <div class="row work">
                <div class="three columns header-col">
                   <h1><span>Courses</span></h1>
-                  <div class="container">
-                     <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Courses
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                           <li><a href="#"> CIS Software Engineering</a></li>
-                           <li><a href="#">DataBase</a></li>
-                        </ul>
-                     </div>
-                  </div>
+                  
                </div>
                <div class="nine columns main-col">
                   <div class="row item">
@@ -96,6 +86,9 @@
                      </div>
                   </div>
                </div>
+                </div>
+             <div class="row work">
+
                <div class="three columns header-col">
                   <h3>Send Message</h3>
                </div>
@@ -109,6 +102,8 @@
                   </div>
                </div>
                
+                 </div>
+             <div class="row work">
                <div class="three columns header-col">
                   <h3>View Discussions</h3>
                </div>
@@ -119,9 +114,10 @@
                      </div>
                   </div>
                </div>
-               <hr />
+               
 
-
+                 </div>
+             <div class="row work">
                 <div class="three columns header-col">
                   <h3>Upload Content</h3>
                </div>
@@ -130,22 +126,27 @@
                   <div class="row item">
                      <div class="twelve columns">
 
-                          <div class="container">
-                  <div class="row item">
+                          
+                  
                      <div class="col-md-6">
                         <asp:FileUpload ID="FileUpload1" runat="server" />
                      </div>
-                      </div>
+                      
+                              <div class="col-md-6">
                      <asp:Button ID="Button1" runat="server" OnClick="c1uploadbtn" Text="Upload" />
-                          
+                          </div>
                       
                       <!--added a label here -->
+                              <div class="col-md-6">
                       <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                         </div>
+                                  </div>
+                         
                          </div>
                   </div>
 
                 </div>
+                 </div>
+             <div class="row work">
 
                  <div class="three columns header-col">
                   <h3>Upload Assignment Questions</h3>
@@ -155,29 +156,29 @@
                   <div class="row item">
                      <div class="twelve columns">
 
-                          <div class="container">
-                  <div class="row item">
+                          
+                  
                      <div class="col-md-6">
                         <asp:FileUpload ID="FileUpload2" runat="server" />
                      </div>
-                      </div>
+                      
+                              <div class="col-md-6">
                      <asp:Button ID="Button2" runat="server" OnClick="c1uploadbtn" Text="Upload" />
-                          
+                          </div>
                       
                       <!--added a label here -->
+                              <div class="col-md-6">
                       <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                                  </div>
                          </div>
-                         </div>
+                         
                   </div>
 
                 </div>
 
                
                 
-              <p>
-
-
-              </p>
+           
 
                  <div class="three columns header-col">
                   <h3> </h3>
@@ -191,7 +192,7 @@
                               <div class="twelve columns">
                                   
                                <center>
-                               <asp:GridView ID="GridView1" runat="server" Width="80%" AutoGenerateColumns="false" EmptyDataText = "No files uploaded">
+                               <asp:GridView ID="GridView1" runat="server" Width="80%" AutoGenerateColumns="false" EmptyDataText = "">
                                
                                    <Columns>
                                  <asp:BoundField DataField="Text" HeaderText="File Name" />
@@ -223,14 +224,14 @@
                            </div>
                            </div>
                     </div>
-                   
+                   </div>
                    
                    <!-- change ended-->
 
                      
                
                 <!--Assignments download section added  -->
-                
+                <div class="row work">
                 <div class="three columns header-col">
                   <h3>Assignments submitted</h3>
                </div>
@@ -290,35 +291,35 @@
 
             </div>
          </section>
-         <!-- Resume Section End-->
-         <!-- project Section
-            ================================================== -->
          <section id="About">
          </section>
          <!-- footer
             ================================================== -->
-         <footer>
-            <div class="row">
-               <div class="col-md-3" >
-                  <h5 style="color:white" >OrangeBoard</h5>
-               </div>
-               <div class="col-md-3">
-                  <h5 style="color:white">Hello</h5>
-               </div>
-               <div class="col-md-3">
-                  <h5 style="color:white">SYRACUSE UNIVERSITY</h5>
-               </div>
-            </div>
-            <div class="row">
-               <div class="twelve columns">
-                  <ul class="social-links">
-                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  </ul>
-               </div>
-               <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-            </div>
-         </footer>
+       <footer>
+				<div class="row">
+                    <div class="col-md-3">
+						<h5 style="color:white">Syracuse University</h5>
+					</div>
+                 	<div class="col-md-3" >
+						<h5 style="color:white">OrangeBoard@gmail.com</h5>
+					</div>
+					<div class="col-md-3">
+						<h5 style="color:white">Phone: +1.315.443.1870</h5>
+					</div>
+                    <div class="col-md-3">
+						<h5 style="color:white">Syracuse ,NY</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<ul class="social-links">
+							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						</ul>
+					</div>
+					<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+				</div>
+			</footer>
          <!-- Footer End-->
          <script type="text/javascript"></script>
          <!-- Java Script

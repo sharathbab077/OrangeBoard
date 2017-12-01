@@ -343,28 +343,31 @@
          </section>
          <!-- footer
             ================================================== -->
-         <footer>
-            <div class="row">
-               <div class="col-md-3" >
-                  <h5 style="color:white" >OrangeBoard</h5>
-               </div>
-               <div class="col-md-3">
-                  <h5 style="color:white">Hello</h5>
-               </div>
-               <div class="col-md-3">
-                  <h5 style="color:white">SYRACUSE UNIVERSITY</h5>
-               </div>
-            </div>
-            <div class="row">
-               <div class="twelve columns">
-                  <ul class="social-links">
-                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  </ul>
-               </div>
-               <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-            </div>
-         </footer>
+       <footer>
+				<div class="row">
+                    <div class="col-md-3">
+						<h5 style="color:white">Syracuse University</h5>
+					</div>
+                 	<div class="col-md-3" >
+						<h5 style="color:white">OrangeBoard@gmail.com</h5>
+					</div>
+					<div class="col-md-3">
+						<h5 style="color:white">Phone: +1.315.443.1870</h5>
+					</div>
+                    <div class="col-md-3">
+						<h5 style="color:white">Syracuse ,NY</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<ul class="social-links">
+							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						</ul>
+					</div>
+					<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+				</div>
+			</footer>
          <!-- Footer End-->
          <script type="text/javascript"></script>
          <!-- Java Script

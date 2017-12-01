@@ -7,7 +7,7 @@
         <!--- Basic Page Needs
 			================================================== -->
         <meta charset="utf-8">
-        <title>Flash Card App</title>
+        <title>Orange Board</title>
         <meta name="description" content="">
         <meta name="author" content="">
         <!-- Mobile Specific Metas
@@ -41,8 +41,7 @@
                         <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
                         <li><a class="smoothscroll" href="#info">About</a></li>
                         <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                        <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                        <li><a class="smoothscroll" href="#project">Lessons</a></li>
+                       
                     </ul>
                     <!-- end #nav -->
                 </nav>
@@ -92,14 +91,14 @@
                                         <div class="col-md-6">
                                             <asp:Label ID="lbl" runat="server" Text="SUID:"></asp:Label>
                                             <div class="col-md-6">
-                                                <asp:TextBox ID="txtboxsuid" runat="server" required="required" Width="295px"></asp:TextBox>   
+                                                <asp:TextBox ID="txtboxsuid" runat="server"  Width="295px"></asp:TextBox>   
                                         </div>
 
                                         <div class="col-md-6">
                                             <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
                                         </div>
                                         <div class="col-md-6">
-                                             <asp:TextBox ID="txtPassword" runat="server" CausesValidation="True" required="required" TextMode="Password" Width="295px"></asp:TextBox>
+                                             <asp:TextBox ID="txtPassword" runat="server" CausesValidation="True"  TextMode="Password" Width="295px"></asp:TextBox>
                       
                                         </div>
                                     </div>
@@ -107,10 +106,19 @@
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10">
                                             <asp:Button ID="Button1" class="btn btn-default" runat="server" Text="Login" OnClick="Button1_Click" />
-                                            <asp:Button ID="Button2" class="btn btn-default" runat="server" Text="Register" OnClick="Button2_Click" />
+                                           
                                         </div>
 
                                     </div>
+
+
+
+
+
+
+
+                            <br>
+                                   new user? register here      <asp:Button ID="Button2" class="btn btn-default" runat="server" Text="Register" OnClick="Button2_Click" />
 
                                 </div>
 
@@ -121,7 +129,7 @@
 
             </section>
 
-            <!-- project Section
+            <!-- Information Section
    ================================================== -->
             <section id="project">
 
@@ -129,7 +137,7 @@
 
                     <div class="twelve columns collapsed">
 
-                        <!--  <h1>Check out some of the cool projects i made</h1>-->
+                        
 
                         <!-- project-wrapper -->
                         <div id="project-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
@@ -170,7 +178,7 @@
                                 </div>
                             </div>
                             <!-- item end -->
-                            <!--done  Key Value Database -->
+                            
                             <div class="columns project-item">
                                 <div class="item-wrap">
 
@@ -223,9 +231,9 @@
                         <div class="description-box">
                             <h4>OrangeBoard</h4>
                             <p>
-                                <span>&bull; All in one place for ur student needs.</span>
+                                <span>&bull; One stop place for students to view their course</span>
                                 <br>
-                                <span>&bull; .</span>
+                                <span>&bull; </span>
                                 <br>
                                 <span>&bull; </span>
                                 <br>
@@ -234,13 +242,13 @@
                         </div>
 
                         <div class="link-box">
-                            <a href="" target="_blank">Link</a>
+                            
                             <a class="popup-modal-dismiss">Close</a>
                         </div>
 
                     </div>
                     <!-- modal-01 End -->
-                    <!-- Supermarket teller -->
+                    
                     <div id="modal-02" class="popup-modal mfp-hide">
 
                         <div class="description-box">
@@ -320,30 +328,41 @@
 
             </section>
 
-            <footer>
-                <div class="row">
+           <footer>
+				<div class="row">
                     <div class="col-md-3">
-                        <h5 style="color:white">OrangeBoard</h5>
-                    </div>
+						<h5 style="color:white">Syracuse University</h5>
+					</div>
+                 	<div class="col-md-3" >
+						<h5 style="color:white">OrangeBoard@gmail.com</h5>
+					</div>
+					<div class="col-md-3">
+						<h5 style="color:white">Phone: +1.315.443.1870</h5>
+					</div>
                     <div class="col-md-3">
-                        <h5 style="color:white">Hello</h5>
-                    </div>
-                    <div class="col-md-3">
-                        <h5 style="color:white">SYRACUSE UNIVERSITY</h5>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="twelve columns">
-                        <ul class="social-links">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        </ul>
-                    </div>
-                    <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-                </div>
-            </footer>
+						<h5 style="color:white">Syracuse ,NY</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<ul class="social-links">
+							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						</ul>
+					</div>
+					<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+				</div>
+			</footer>
+
+
+
             <!-- Footer End-->
             <script type="text/javascript">
+
+
+
+
+
 </script>
             <!-- Java Script
 				================================================== -->
