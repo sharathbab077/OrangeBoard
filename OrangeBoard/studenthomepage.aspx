@@ -80,13 +80,9 @@
 
                 <div class="nine columns main-col">
                     <div class="row item">
-                        <div class="twelve columns">
+                        <div id="addhere" class="twelve columns" runat="server">
 
-                             <asp:Button ID="Button1" runat="server" Text="Software Engineering" /> 
-                            <br />
                             
-                    <asp:Button ID="Button3" runat="server" Text="Mobile Development" /> <br />
-                            <asp:Button ID="Button2" runat="server" Text="OOD" />
 
                         </div>
 

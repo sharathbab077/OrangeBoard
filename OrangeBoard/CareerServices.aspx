@@ -20,7 +20,8 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link rel="stylesheet" href="css/default.css">
-      <link rel="stylesheet" href="css/layout.css">
+      <link rel="stylesheet" href="css/layout.css?version=1">
+       
       <link rel="stylesheet" href="css/media-queries.css">
       <link rel="stylesheet" href="css/magnific-popup.css">
       <!-- Script
@@ -29,7 +30,7 @@
       <!-- Favicons
          ================================================== -->
       <link rel="shortcut icon" href="favicon.png">
-      <link rel="stylesheet" href="css/style.css">
+     
       <style>
          body {
          background-image: url("blue1.png");
@@ -160,6 +161,7 @@
       </style>
    </head>
    <body>
+      
       <form id="form3" runat="server">
          <header id="home">
             <nav id="nav-wrap">
@@ -167,11 +169,11 @@
                <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
                <ul id="nav" class="nav">
                   <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-                  <li><a class="smoothscroll" href="#info">About</a></li>
-                  <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                  <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                  <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                  < </ul>
+                  <li><a class="smoothscroll" href="#resume">Suggest Jobs</a></li>
+                  <li><a class="smoothscroll" href="#project">Alumni Record</a></li>
+                 <%-- <li><a class="smoothscroll" href="#project">Lessons</a></li>
+                  <li><a class="smoothscroll" href="#project">Lessons</a></li>--%>
+                   </ul>
                <!-- end #nav -->
             </nav>
             <!-- end #nav-wrap -->
@@ -192,8 +194,13 @@
          <!-- Header End -->
          <!-- Info Section
             ================================================== -->
-          <section id="resume">
+          <section id="resume" runat="server">
+     <center>
+
               <legend class="auto-style1">Job Requirements</legend>
+         <hr />
+
+              </center>
 <center>
                <legend class="auto-style1">Education</legend>
             </center>
@@ -274,7 +281,7 @@
                </div>
             </div>
           <center>
-        <asp:Button ID="careerInfo" CssClass="Button1" runat="server"  Text="Suggest jobs" Width="117px" OnClick="Button1_Click"    />
+        <asp:Button ID="careerInfo" CssClass="Button1" runat="server"  Text="Suggest jobs" Width="144px" OnClick="Button1_Click"    />
     </center>
 
 
@@ -283,9 +290,102 @@
          <!-- project Section
             ================================================== -->
          <section id="About">
+          
+         </section>
+
+
+
+          <section id="project" runat="server">
+
+<center>
+               <legend class="auto-style1">Alumni Records</legend>
+            </center>
+            <br />
+            <hr />
+            <div class="row work">
+               
+              <div class="five columns header-col">
+                  <h1>Alumni Name</h1>
+               </div>
+               <div class="seven columns main-col">
+                  <div class="row item">
+                     <div class="twelve columns">
+                        <asp:TextBox runat="server" ID="Aname" Width="295px" />
+                     </div>
+                  </div>
+               </div>
+              
+               <div class="five columns header-col">
+                  <h1>Major:</h1>
+               </div>
+               <div class="seven columns main-col">
+                  <div class="row item">
+                     <div class="twelve columns">
+                        <asp:TextBox runat="server" ID="amajor" Width="295px"/>
+                     </div>
+                  </div>
+               </div>
+               <div class="five columns header-col">
+                  <h1>Company:</h1>
+               </div>
+               <div class="seven columns main-col">
+                  <div class="row item">
+                     <div class="twelve columns">
+                        <asp:TextBox runat="server" ID="acompany" Width="295px" />
+                     </div>
+                  </div>
+               </div>
+                  <div class="five columns header-col">
+                  <h1>Job Position :</h1>
+               </div>
+               <div class="seven columns main-col">
+                  <div class="row item">
+                     <div class="twelve columns">
+                        <asp:TextBox runat="server" ID="ajob" Width="295px"/>
+                     </div>
+                  </div>
+               </div>
+                 <div class="five columns header-col">
+                  <h1>Other criteria :</h1>
+               </div>
+               <div class="seven columns main-col">
+                  <div class="row item">
+                     <div class="twelve columns">
+                        <asp:TextBox runat="server" ID="aother" Width="295px"/>
+                     </div>
+                  </div>
+               </div>
+               
+                </div>
+                  
+            <br />
+            <hr />
+          
+              
+            
+            
+          <center>
+        <asp:Button ID="Button1" CssClass="Button1" runat="server"  Text="Search Records" Width="144px" OnClick="Button2_Click"    />
+    </center>
+            <center>
+              <asp:GridView ID="GridView2" runat="server" ViewStateMode="Enabled" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Width="80%">
+                  <AlternatingRowStyle BackColor="#DCDCDC" />
+                  <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                  <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                  <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                  <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                  <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                  <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                  <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                  <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                  <SortedDescendingHeaderStyle BackColor="#000065" />
+              </asp:GridView>
+                </center>
+              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [AlumniRecord]"></asp:SqlDataSource>
          </section>
          <!-- footer
-            ================================================== -->
+            =====================
+             ============================= -->
          <footer>
             <div class="row">
                <div class="col-md-3" >

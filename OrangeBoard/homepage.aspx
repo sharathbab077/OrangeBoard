@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="css/media-queries.css">
         <link rel="stylesheet" href="css/magnific-popup.css">
         <!-- Script
-			================================================== -->
+			<%--================================================== -->--%>
         <script src="js/modernizr.js"></script>
 
         <!-- Favicons

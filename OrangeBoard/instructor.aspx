@@ -82,10 +82,10 @@
               
             <p>
               
-                <p>Hi, You have two courses</p>
+                <p id="addhere" runat="server">Hi, You have two courses</p>
                 
-                <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Course-1" />
-                <asp:Button ID="Button3" runat="server" Text="Course-2" OnClick="Button3_Click" />
+                <%--<asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Course-1" />
+                <asp:Button ID="Button3" runat="server" Text="Course-2" OnClick="Button3_Click" />--%>
               
 
              </p>

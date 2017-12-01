@@ -176,7 +176,6 @@
     <Content Include="css\materialize.min.css" />
     <Content Include="css\media-queries.css" />
     <Content Include="css\nextpage.css" />
-    <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -450,15 +449,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="course1\" />
-    <Folder Include="course2\" />
-    <Folder Include="course3\" />
+    <Folder Include="assignment1\" />
+    <Folder Include="courseContent\" />
     <Folder Include="images\projects\" />
+    <Folder Include="scss\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="scss\style.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

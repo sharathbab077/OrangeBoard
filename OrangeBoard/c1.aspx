@@ -80,15 +80,16 @@
                <div class="nine columns main-col">
                   <div class="row item">
                      <div class="twelve columns">
-                        <h3>Software Engineering</h3>
+                        <h3 id="coursetitle" runat="server"></h3>
                         <div class="well well-lg">
                            <p>
-                              <i><b>
-                              Location</b> :-Life Science Building,Syracuse University<br />
-                              </i>
+                             <i>
+                             <b>
+                              Location :-</b> <div id="courselocation" runat="server">  </div> <br />
+                               </i>
                               <i>
-                              <b>Day of the week</b>:-Monday and Wednesday <br />
-                              <b>Timings</b>:-10.00 A.M-12.00 A.M 
+                              <b>Day of the week :-</b> <div id="courseday" runat="server">  </div> <br />
+                              <b>Timings :-</b> <div id="coursetiming" runat="server"> </div> 
                               </i>
                            </p>
                         </div>
@@ -121,39 +122,172 @@
                <hr />
 
 
-                
-               <h3>Upload and Download Content of this course</h3>
-               <div class="container">
-                  <div class="row">
+                <div class="three columns header-col">
+                  <h3>Upload Content</h3>
+               </div>
+
+                <div class="nine columns main-col">
+                  <div class="row item">
+                     <div class="twelve columns">
+
+                          <div class="container">
+                  <div class="row item">
                      <div class="col-md-6">
                         <asp:FileUpload ID="FileUpload1" runat="server" />
                      </div>
+                      </div>
                      <asp:Button ID="Button1" runat="server" OnClick="c1uploadbtn" Text="Upload" />
+                          
+                      
+                      <!--added a label here -->
+                      <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                         </div>
+                         </div>
                   </div>
-                  <div class="col-md-12">
-                     <i> View and Download course files here.</i>
-                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" OnRowCommand="GridView1_RowCommand" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CellSpacing="2" ForeColor="Black">
-                        <Columns>
-                           <asp:TemplateField HeaderText="File">
-                              <ItemTemplate>
-                                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("File") %>' CommandName="Download" Text='<%# Eval("File") %>'></asp:LinkButton>
-                              </ItemTemplate>
-                           </asp:TemplateField>
-                           <asp:BoundField DataField="Size" HeaderText="Size" />
-                           <asp:BoundField DataField="Type" HeaderText="Filetype" />
-                        </Columns>
-                        <FooterStyle BackColor="#CCCCCC" />
-                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-                        <RowStyle BackColor="White" />
-                        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                        <SortedAscendingHeaderStyle BackColor="#808080" />
-                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                        <SortedDescendingHeaderStyle BackColor="#383838" />
-                     </asp:GridView>
-                  </div>
+
+                </div>
+
+                 <div class="three columns header-col">
+                  <h3>Upload Assignment Questions</h3>
                </div>
+
+                <div class="nine columns main-col">
+                  <div class="row item">
+                     <div class="twelve columns">
+
+                          <div class="container">
+                  <div class="row item">
+                     <div class="col-md-6">
+                        <asp:FileUpload ID="FileUpload2" runat="server" />
+                     </div>
+                      </div>
+                     <asp:Button ID="Button2" runat="server" OnClick="c1uploadbtn" Text="Upload" />
+                          
+                      
+                      <!--added a label here -->
+                      <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                         </div>
+                         </div>
+                  </div>
+
+                </div>
+
+               
+                
+              <p>
+
+
+              </p>
+
+                 <div class="three columns header-col">
+                  <h3> </h3>
+               </div>
+                  
+
+                   <!-- No changes till here-->
+
+                   <div class="nine columns main-col">
+                           <div class="row item">
+                              <div class="twelve columns">
+                                  
+                               <center>
+                               <asp:GridView ID="GridView1" runat="server" Width="80%" AutoGenerateColumns="false" EmptyDataText = "No files uploaded">
+                               
+                                   <Columns>
+                                 <asp:BoundField DataField="Text" HeaderText="File Name" />
+                                 <asp:TemplateField>
+                                    <ItemTemplate>
+                                       <asp:LinkButton ID="LinkButton1" Text = "Download" CommandArgument = '<%# Eval("Value") %>' runat="server" OnClick = "DownloadFile"></asp:LinkButton>
+                                    </ItemTemplate>
+                                 </asp:TemplateField>
+                                 <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <!--added this new delete button with different id-->
+                                       <asp:LinkButton ID = "LinkButton2delete" Text = "Delete" CommandArgument = '<%# Eval("Value") %>' runat = "server" OnClick = "DeleteFile" />
+                                    </ItemTemplate>
+                                 </asp:TemplateField>
+                              </Columns>
+                                    <EditRowStyle BackColor="#2461BF" />
+                                       <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                       <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                       <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                       <RowStyle BackColor="#EFF3FB" />
+                                       <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                       <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                       <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                       <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                       <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                           
+                           </asp:GridView>
+                           </center>
+                           </div>
+                           </div>
+                    </div>
+                   
+                   
+                   <!-- change ended-->
+
+                     
+               
+                <!--Assignments download section added  -->
+                
+                <div class="three columns header-col">
+                  <h3>Assignments submitted</h3>
+               </div>
+             
+             <div class="nine columns main-col">
+                           <div class="row item">
+                              <div class="twelve columns">
+                                   <asp:Button ID="instructorassignmentbtn" runat="server" Text="View Assignment"  OnClick="viewuploadedassignment" />
+
+
+
+                                  </div>
+                               <div class="twelve columns">
+                                   <center>
+                                   <asp:GridView ID="GridViewinstructorassignment" Width="80%" runat="server" AutoGenerateColumns="False" EmptyDataText = "No files uploaded" CellPadding="4" ForeColor="#333333" GridLines="None">
+                             
+                                       <AlternatingRowStyle BackColor="White" />
+                             
+                                   <Columns>
+                                 <asp:BoundField DataField="Text" HeaderText="File Name" />
+                                 <asp:TemplateField>
+                                    <ItemTemplate>
+                                       <asp:LinkButton ID="lnkDownloadassignmentinstructor" Text = "Download" CommandArgument = '<%# Eval("Value") %>' runat="server" OnClick = "DownloadFile"></asp:LinkButton>
+                                    </ItemTemplate>
+                                 </asp:TemplateField>
+                                 <asp:TemplateField>
+                                    <ItemTemplate>
+                                       <asp:LinkButton ID = "lnkDeleteassignmentinstructor" Text = "Delete" CommandArgument = '<%# Eval("Value") %>' runat = "server" OnClick = "DeleteFile" />
+                                    </ItemTemplate>
+                                 </asp:TemplateField>
+                              </Columns>
+                           
+                                       <EditRowStyle BackColor="#2461BF" />
+                                       <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                       <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                       <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                       <RowStyle BackColor="#EFF3FB" />
+                                       <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                       <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                       <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                       <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                       <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                           
+                           </asp:GridView>
+                                       </center>
+
+                               </div>
+                 </div>
+                 </div>
+             
+             
+            
+
+                <!-- changes ended-->
+
+
+
             </div>
          </section>
          <!-- Resume Section End-->

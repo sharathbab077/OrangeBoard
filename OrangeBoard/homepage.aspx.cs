@@ -22,10 +22,12 @@ namespace OrangeBoard
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-          
+            Session["suidValue"]= txtboxsuid.Text;
+
+
             SqlConnection con = new SqlConnection();
 
-            con.ConnectionString = @"Data Source=DESKTOP-4PPCII6\SQLEXPRESS;Initial Catalog=OrangeBoard;Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "C:\\Users\\Mehal K Chaudhari\\Source\\Repos\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select StudentId from dbo.Student", con);
             SqlDataAdapter da2 = new SqlDataAdapter("select InstructorId from dbo.Instructor", con);
