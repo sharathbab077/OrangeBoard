@@ -13,6 +13,8 @@
         <!-- Mobile Specific Metas
 			================================================== -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+         <link rel="stylesheet" href="animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!-- CSS
 			================================================== -->
@@ -40,7 +42,7 @@
                     <ul id="nav" class="nav">
                         <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
                         <li><a class="smoothscroll" href="#info">About</a></li>
-                        <li><a class="smoothscroll" href="#project">Lessons</a></li>
+                        <li><a class="smoothscroll" href="#project">Features</a></li>
                        
                     </ul>
                     <!-- end #nav -->
@@ -78,7 +80,7 @@
                     <div class="row education">
 
                         <div class="three columns header-col">
-
+                            
                         </div>
 
                         <div class="nine columns main-col">
@@ -88,8 +90,8 @@
                                 <div class="twelve columns">
 
                                     <div class="form-group">
-                                        <div class="col-md-6">
-                                            <asp:Label ID="lbl" runat="server" Text="SUID:"></asp:Label>
+                                        <div class="col-md-6 animated zoomIn">
+                                            <asp:Label ID="lbl"  runat="server" Text="SUID:"></asp:Label>
                                             <div class="col-md-6">
                                                 <asp:TextBox ID="txtboxsuid" runat="server"  Width="295px"></asp:TextBox>   
                                         </div>
@@ -126,12 +128,14 @@
 
                         </div>
                     </div>
+                        </div>
+                    </div>
 
             </section>
 
             <!-- Information Section
    ================================================== -->
-            <section id="project">
+            <section id="Features">
 
                 <div class="row">
 
@@ -327,6 +331,101 @@
             <section id="About">
 
             </section>
+
+                   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>Get In Touch.</span></h1>
+
+            </div>
+
+            <div class="ten columns">
+
+                  <p>Contact Us
+                  </p>
+
+            </div>
+
+         </div>
+
+         <div class="row">
+
+            <div class="eight columns">
+
+               <!-- form -->
+               <form action="" method="post" id="contactForm" name="contactForm">
+					<fieldset>
+
+                  <div>
+						   <label for="contactName">Name <span class="required">*</span></label>
+						   
+                            <asp:TextBox ID="contactName" runat="server"></asp:TextBox>
+                  </div>
+
+                  <div>
+						   <label for="contactEmail">Email <span class="required">*</span></label>
+						   
+                             <asp:TextBox ID="contactEmail" runat="server"></asp:TextBox>
+                  </div>
+
+                  <div>
+						   <label for="contactSubject">Subject</label>
+						   
+                      <asp:TextBox ID="contactSubject" runat="server"></asp:TextBox>
+                  </div>
+
+                  <div>
+                     <label for="contactMessage">Message <span class="required">*</span></label>
+                     
+                      <asp:TextBox ID="contactMessage" cols="20" rows="15" runat="server"></asp:TextBox>
+                  </div>
+
+                  <div class="col-md-12">
+                      
+                 <asp:Button ID="submitbtn" class="submit" runat="server" OnClick="sendmail" Text="Submit"  />
+                     
+                     <span id="image-loader">
+                        <img alt="" src="images/loader.gif">
+                     </span>
+                  </div>
+
+					</fieldset>
+				   </form> <!-- Form End -->
+
+               <!-- contact-warning -->
+               <div id="message-warning"> Error</div>
+               <!-- contact-success -->
+				   <div id="message-success">
+                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+				   </div>
+
+            </div>
+
+
+            <aside class="four columns footer-widgets">
+
+               <div class="widget widget_contact">
+
+					  <div class="container">
+<a class="twitter-timeline" data-width="400" data-height="500" data-theme="light" href="https://twitter.com/SyracuseU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Syracuse University Tweets</a> 
+                             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                             </div>
+
+				   </div>
+
+              
+
+            </aside>
+
+      </div>
+
+   </section>
+
+
+
 
            <footer>
 				<div class="row">

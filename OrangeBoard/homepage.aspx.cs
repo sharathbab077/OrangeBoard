@@ -10,6 +10,8 @@ using System.Data;
 //using Clockwork;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Net.Mail;
+using System.Text;
 
 namespace OrangeBoard
 {
@@ -67,5 +69,41 @@ namespace OrangeBoard
         {
             Response.Redirect("register.aspx");
         }
+
+        protected void sendmail(object sender, EventArgs e)
+        {
+            string to = "sharathbabu077@gmail.com"; //To address    
+           
+            //From address    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            string from = contactEmail.Text;
+            MailMessage message = new MailMessage(from, to);
+
+            string mailbody = contactMessage.Text;
+            string subject = contactSubject.Text;
+            message.Subject = subject;
+            
+            message.Body = mailbody;
+            message.BodyEncoding = Encoding.UTF8;
+            message.IsBodyHtml = true;
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
+            System.Net.NetworkCredential basicCredential1 = new
+            System.Net.NetworkCredential("s.sachin2911@gmail.com", "oneplustwo");
+            client.EnableSsl = true;
+            client.UseDefaultCredentials = false;
+            client.Credentials = basicCredential1;
+            try
+            {
+                client.Send(message);
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        
+       
     }
 }
