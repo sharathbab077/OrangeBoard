@@ -531,7 +531,7 @@ h5 {
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 		<!--Import materialize.css-->
 		<link href="css/default.css" rel="stylesheet" />
-<link href="css/layout.css" rel="stylesheet" />
+<link href="css/layout.css?version=52" rel="stylesheet" />
 <link href="css/media-queries.css" rel="stylesheet" />
 <link href="css/magnific-popup.css" rel="stylesheet" />
 		<!-- Script
@@ -705,7 +705,8 @@ fieldset
 
     </style>
 <form id="form2" runat="server">
-    <header id="home">
+    <header id="home" style=" position: relative;
+    height: 500px !important;">
         <nav id="nav-wrap">
             <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a> <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
             <ul id="nav" class="nav">

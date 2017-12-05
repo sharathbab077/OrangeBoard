@@ -9,8 +9,8 @@ body {
 
 header {
     position: relative;
-    height: 500px;
-    min-height: 500px;
+    height: 877px !important;
+    min-height: 500px !important;
     width: 100%;
     background: #161415 url(../images/college.jpg) no-repeat top center;
     background-size: cover !important;
