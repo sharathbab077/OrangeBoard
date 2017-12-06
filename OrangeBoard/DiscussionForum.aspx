@@ -1,4 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="instructor.aspx.cs" Inherits="OrangeBoard.instructor" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DiscussionForum.aspx.cs" Inherits="OrangeBoard.discussionForum" %>
+
+
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -40,7 +42,8 @@
 						<li class="current"><a class="smoothscroll" href="#home">Home</a></li>
 						<li><a class="smoothscroll" href="#info">About</a></li>
 						<li><a class="smoothscroll" href="#project">Lessons</a></li>
-					   
+					    <li><a class="smoothscroll" href="#project">Lessons</a></li>
+                        <li><a class="smoothscroll" href="#project">Lessons</a></li>
                     </ul>
 					<!-- end #nav -->
 				</nav>
@@ -63,69 +66,115 @@
 			<!-- Info Section
 				================================================== -->
 			<section id="resume">
-				 <div class="row work">
 
-      <div class="three columns header-col">
-        <h1><span>Courses</span></h1>
+                <!--creating a new discussion forum-->
+                <div class="container">
+                    <p>
+                        Create a new discussion Forum
+                    </p>
+
+                    
+    <div>
+    <div>
         
-      </div>
+        <asp:Label ID="txbxTitle" runat="server" Text="Course"></asp:Label>
+    </div>
+    <div>
+        Name:<asp:TextBox ID="txbxAuthor" runat="server"></asp:TextBox>
+    </div>
+        
+    <div>
+        Enter your comment<br />
+        <asp:TextBox ID="txbxContent" runat="server" TextMode="MultiLine"></asp:TextBox>
+    </div>
+    <asp:Button ID="discussforumbtn" runat="server" Text="Submit" OnClick="discussforum_onClick" />
+</div>
 
-      <div class="nine columns main-col">
 
-        <div class="row item">
+                </div>
+                <!--creating a new discussion forum-->
 
-          <div class="twelve columns">
 
-            
-            
-              
-            <p>
-              
-                <p id="addhere" runat="server">Hi, Your Courses are</p>
-                
-                <%--<asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Course-1" />
-                <asp:Button ID="Button3" runat="server" Text="Course-2" OnClick="Button3_Click" />--%>
-              
+				<div class="container">
+					
 
-             </p>
+                    <asp:Button ID="Button1" runat="server" Text="View Discussions" />
 
-          </div>
+                    <div class="container">
+                         <div>
+<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" class="gridview" ShowHeader="false" GridLines="None">
+<Columns>
+<asp:TemplateField ShowHeader="false">
+<ItemTemplate>
+<tr>
+<td>
+<div class="BlogHead">
+<h2><a href='<%# Eval("Id", "PostComment.aspx?Id={0}") %>' class="BlogHead">
+<asp:Label ID="Label1" runat="server" Text='<%#Eval("Title") %>'></asp:Label></a></h2>
+    
+</div>
+<div class="post_meta">
+    <span class="post_author blackLink nocursor"><asp:Label ID="Label2" runat="server" Text='<%#Eval("Author") %>'></asp:Label>,</span>
+    <span class="date blackLink nocursor"><asp:Label ID="Label11" runat="server" Text='<%#Eval("BlogDate") %>'></asp:Label></span>
+</div>
+<br />
+<div id="blbodythumb" style="text-align:justify;">
+<p><asp:Label ID="Label100" runat="server" Text='<%#Eval("Content") %>' ></asp:Label></p></div><hr class="style-one" />
+</td>
+</tr>
+</ItemTemplate>
+</asp:TemplateField>
+</Columns>
+<EmptyDataTemplate>
+No data
+</EmptyDataTemplate>
+</asp:GridView>
+</div>
 
-        </div>
-      </div>
-                     </div>
+
+
+                    </div>
+
+
+				</div>
 			</section>
-			
+			<!-- Resume Section End-->
+			<!-- project Section
+				================================================== -->
+		
 			<section id="About">
 			</section>
 			
+
+         
+
 			<!-- footer
 				================================================== -->
-			 <footer>
-         <div class="row">
-            <div class="col-md-3">
-               <h5 style="color:white">Syracuse University</h5>
-            </div>
-            <div class="col-md-3" >
-               <h5 style="color:white">OrangeBoard@gmail.com</h5>
-            </div>
-            <div class="col-md-3">
-               <h5 style="color:white">Phone: +1.315.443.1870</h5>
-            </div>
-            <div class="col-md-3">
-               <h5 style="color:white">Syracuse ,NY</h5>
-            </div>
-         </div>
-         <div class="row">
-            <div class="twelve columns">
-               <ul class="social-links">
-                  <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-               </ul>
-            </div>
-            <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-         </div>
-      </footer>
+			<footer>
+				<div class="row">
+                    <div class="col-md-3">
+						<h5 style="color:white">Syracuse University</h5>
+					</div>
+                 	<div class="col-md-3" >
+						<h5 style="color:white">OrangeBoard@gmail.com</h5>
+					</div>
+					<div class="col-md-3">
+						<h5 style="color:white">Phone: +1.315.443.1870</h5>
+					</div>
+                    <div class="col-md-3">
+						<h5 style="color:white">Syracuse ,NY</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<ul class="social-links">
+							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						</ul>
+					</div>
+					<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+				</div>
+			</footer>
 			<!-- Footer End-->
 			<script type="text/javascript">
                 

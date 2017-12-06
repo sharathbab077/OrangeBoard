@@ -159,8 +159,9 @@ namespace OrangeBoard
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-4PPCII6\SQLEXPRESS;Initial Catalog=OrangeBoard;Integrated Security=True";
-             con.Open();
+            // con.ConnectionString = @"Data Source=DESKTOP-4PPCII6\SQLEXPRESS;Initial Catalog=OrangeBoard;Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "F:\\3sem\\mehal125\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
+            con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = System.Data.CommandType.Text;
                 cmd.CommandText = "INSERT INTO StudentCareerInformation(StudId, degree, major, programmingLanguages, company, jobtitle, workyears, jobResponsibility, projtitle, projcompletiondate, technology, projresponsibility, phoneNumber) VALUES ('" + "287773263" + "','" + degree.Text + "','" + major.Text + "','" 

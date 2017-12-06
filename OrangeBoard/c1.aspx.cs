@@ -9,6 +9,7 @@ using System.IO;
 using System.Data;
 using System.Net.Mail;
 using System.Data.SqlClient;
+using System.Net;
 
 namespace OrangeBoard
 {
@@ -24,7 +25,8 @@ namespace OrangeBoard
 
             SqlConnection con = new SqlConnection();
             string i = Session["id"].ToString();
-            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "C:\\Users\\Mehal K Chaudhari\\Source\\Repos\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
+            // con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "C:\\Users\\Mehal K Chaudhari\\Source\\Repos\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "F:\\3sem\\mehal125\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
             con.Open();
             /***************/
             SqlDataAdapter da = new SqlDataAdapter("select CourseId,CourseContent,AssignmentQuestion from dbo.CourseContent where CourseId = '" + Session["cid" + i].ToString() + "';", con);
@@ -188,79 +190,64 @@ namespace OrangeBoard
 
         }
 
-        protected void notifybtnc1_Click(object sender, EventArgs e)
+      
+
+        protected void sendmailadd(object sender, EventArgs e)
         {
-
             SqlDataReader rdr = null;
-
-            // create a connection object
-            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = F:\\3sem\\senew\\OrangeBoard\\OrangeBoard\\App_Data\\email.mdf; Integrated Security = True");
-
-            // create a command object
-            SqlCommand cmd = new SqlCommand("SELECT [Full Name],EmailId from dbo.Student", conn);
-
+            var emaillist = new List<String>();
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = @"Data Source = sharath\sqlexpress;Initial Catalog = Student;Integrated Security = True";
+            SqlCommand cmd = new SqlCommand("SELECT emailid from dbo.emailsd", conn);
             try
             {
-                // open the connection
                 conn.Open();
-
-                // get an instance of the SqlDataReader
                 rdr = cmd.ExecuteReader();
 
-                var emails = new List<courseonerecpients>();
                 while (rdr.Read())
                 {
+                    string name = rdr["emailid"].ToString();
+                    emaillist.Add(name);
 
-                    emails.Add(new courseonerecpients
-                    {
-
-                        name = rdr["[Full Name]"].ToString(),
-                        email = rdr["EmailId"].ToString(),
-
-
-                    });
-                }
-
-                foreach (courseonerecpients email in emails)
-                {
-                    const string username = "";
-                    const string password = "";
-                    SmtpClient smtpClient = new SmtpClient();
-                    MailMessage mail = new MailMessage();
-                    MailAddress fromaddress = new MailAddress("s.sachin2911@gmail.com", "Sachin S");
-                    smtpClient.Host = "smtp.gmail.com";
-                    smtpClient.Port = 587;
-                    mail.From = fromaddress;
-                    mail.To.Add(email.email);
-                    mail.Subject = ("Course One");
-                    mail.IsBodyHtml = false;
-                    string notifytext = c1txtarea.Text;
-                    mail.Body = notifytext;
-                    smtpClient.EnableSsl = true;
-                    smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    smtpClient.Credentials = new System.Net.NetworkCredential(username, password);
-                    smtpClient.Send(mail);
                 }
 
             }
-
-            finally
+            catch (Exception ex)
             {
-                // close the reader
-                if (rdr != null)
-                {
-                    rdr.Close();
-                }
 
-                // close the connection
-                if (conn != null)
+            }
+            conn.Close();
+            foreach (var m in emaillist)
+            {
+                string txtEmail = "orange.board.syracuse@gmail.com";
+                string txtTo = m;
+                string ssub = "Notification";
+                
+                string body = c1txtarea.Text;
+                using (MailMessage mm = new MailMessage(txtEmail, txtTo))
                 {
-                    conn.Close();
+                    mm.Subject = ssub;
+                    mm.Body = body;
+
+                    mm.IsBodyHtml = false;
+                    SmtpClient smtp = new SmtpClient();
+                    smtp.Host = "smtp.gmail.com";
+                    smtp.EnableSsl = true;
+                    NetworkCredential NetworkCred = new NetworkCredential(txtEmail, "orangeboard");
+                    smtp.UseDefaultCredentials = true;
+                    smtp.Credentials = NetworkCred;
+                    smtp.Port = 587;
+                    smtp.Send(mm);
+                    ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Email sent.');", true);
+
                 }
             }
         }
+    
+    
 
-        protected void viewuploadedassignment(object sender, EventArgs e)
+
+    protected void viewuploadedassignment(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
             string i = Session["id"].ToString();
@@ -305,7 +292,23 @@ namespace OrangeBoard
             GridViewinstructorassignment.DataBind();
         }
 
+        protected void editgrades(object sender, EventArgs e)
+        {
+           // string i = Session["id"].ToString();
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = @"Data Source = sharath\sqlexpress;Initial Catalog = Student;Integrated Security = True";
+            con.Open();
 
+         //   SqlDataAdapter da = new SqlDataAdapter("select marks from dbo.marks where studentid = '" + Session["cid" + i].ToString() + "';", con);
+           // DataSet ds = new DataSet();
+           // da.Fill(ds, "dbo.Assignment");
+
+
+        }
     }
+
+
+
+
 }
 

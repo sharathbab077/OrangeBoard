@@ -18,8 +18,8 @@ namespace OrangeBoard
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-
-            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+"C:\\Users\\Mehal K Chaudhari\\Source\\Repos\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;"+"Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "F:\\3sem\\mehal125\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
+            // con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+"C:\\Users\\Mehal K Chaudhari\\Source\\Repos\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;"+"Integrated Security=True";
             con.Open();
             string a = Session["suidValue"].ToString();
             SqlDataAdapter da = new SqlDataAdapter("select NumberOfCourses from dbo.Instructor where InstructorId='"+ Session["suidValue"].ToString() + "' ;", con);

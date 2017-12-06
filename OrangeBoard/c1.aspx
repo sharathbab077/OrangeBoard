@@ -87,6 +87,44 @@
                   </div>
                </div>
                 </div>
+
+             <div class="row work">
+                 <div class="three columns header-col">
+                     <h3>Edit Grades</h3>
+                 </div>
+                 <div class="nine columns main-col">
+                     <div class="row item">
+                     <div class="twelve columns">
+                         <div class="col-md-6">
+                             Enter Student ID:-
+                         </div>
+                         <div class="col-md-6">
+                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                             </div>
+                         </div>
+                         <div class="twelve columns">
+                         <div class="col-md-6">
+                             New Grade:-
+                         </div>
+                              <div class="col-md-6">
+                         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                             </div>
+
+                             </div>
+                         <div class="twelve columns">
+                             <div class="col-md-6">
+                                 </div>
+                             <div class="col-md-6">
+                             <asp:Button ID="Button3" runat="server" Text="Update" OnClick="editgrades" />
+                                 </div>
+                         </div>
+                         
+                     </div>
+                 </div>
+                 </div>
+             
+
+
              <div class="row work">
 
                <div class="three columns header-col">
@@ -97,7 +135,7 @@
                      <div class="twelve columns">
                          <asp:TextBox ID="c1txtarea" runat="server"></asp:TextBox>
                         
-                        <asp:Button ID="notifybtnc1" runat="server" Text="Notify" OnClick="notifybtnc1_Click" />
+                        <asp:Button ID="notifybtnc1" runat="server" Text="Notify" OnClick="sendmailadd" />
                      </div>
                   </div>
                </div>
