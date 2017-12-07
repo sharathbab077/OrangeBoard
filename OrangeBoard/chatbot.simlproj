@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SimlProject>
+  <Profile>Classic</Profile>
+  <Name>ChatBot</Name>
+  <Directory>chatbot</Directory>
+  <BotName>Chatty</BotName>
+  <Personality>Female</Personality>
+  <Author>Sharath</Author>
+  <Description>OrangeBoard</Description>
+  <Date>17-12-06 02:36:07.737</Date>
+  <Notes></Notes>
+</SimlProject>

@@ -52,6 +52,12 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Syn.Bot, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syn.Bot.1.1.1\lib\portable-net45+sl5+wp8+win8\Syn.Bot.dll</HintPath>
+    </Reference>
+    <Reference Include="Syn.Chat, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syn.Chat.1.0.3\lib\net45\Syn.Chat.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -138,10 +144,12 @@
     <Content Include="App_Data\OrangeBoard_log.ldf">
       <DependentUpon>OrangeBoard.mdf</DependentUpon>
     </Content>
+    <Content Include="Assistant\Package.txt" />
     <Content Include="c1.aspx" />
     <Content Include="c2.aspx" />
     <Content Include="c3.aspx" />
     <Content Include="CareerServices.aspx" />
+    <Content Include="ChatService.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -381,6 +389,13 @@
     </Compile>
     <Compile Include="CareerServices.aspx.designer.cs">
       <DependentUpon>CareerServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChatService.aspx.cs">
+      <DependentUpon>ChatService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChatService.aspx.designer.cs">
+      <DependentUpon>ChatService.aspx</DependentUpon>
     </Compile>
     <Compile Include="DiscussionForum.aspx.cs">
       <DependentUpon>DiscussionForum.aspx</DependentUpon>

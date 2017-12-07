@@ -1,0 +1,20 @@
+﻿<Siml>
+  <!--Entry point for creating your Syn Web Assistant-->
+  <!--Note: You should NOT add any template to this Project. If you wish to use a base Template you should select the Template from you Syn Account.-->
+  <Concept Type="Public" Name="Introduction">
+    
+    <Model>
+      <Pattern>HELLO ASSISTANT</Pattern>
+      <Response>Hello User!</Response>
+    </Model>
+    
+    <Model>
+    <Pattern>
+    <Item>HOW ARE YOU</Item>
+    <Item>HOW IS IT GOING</Item>
+    </Pattern>
+    <Response>I AM DOING GREAT</Response>
+    </Model>
+    
+  </Concept>
+</Siml>

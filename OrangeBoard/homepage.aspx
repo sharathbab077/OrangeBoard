@@ -183,7 +183,7 @@
                               <img class="img-responsive" alt="" src="images/otto.png">
                               <div class="overlay">
                                  <div class="project-item-meta">
-                                    <h5 style="color:aqua">Chat Bot</h5>
+                                    <h5 style="color:aqua">Plagiarism checker</h5>
                                  </div>
                               </div>
                               <div class="link-icon"><i class="icon-plus"></i></div>
@@ -251,14 +251,12 @@
                <!-- modal-03 End -->
                <div id="modal-04" class="popup-modal mfp-hide">
                   <div class="description-box">
-                     <h4>Chat Bot</h4>
+                     <h4>Plagiarism checker</h4>
                      <p>
-                        <span>&bull;SIML Library </span>
+                        <span>&bull;Detects if a copy of the assignment submitted is plagiarized.</span>
                         <br>
-                        <span>&bull;</span>
-                        <br>
-                        <span>&bull;</span>
-                        <br>
+                        <span>&bull;Lists out the various sources from where the code is taken</span>
+                        
                      </p>
                      <span class="categories"><i class="fa fa-tag"></i>C++</span>
                   </div>
