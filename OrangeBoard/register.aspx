@@ -712,9 +712,9 @@ fieldset
             <ul id="nav" class="nav">
                 <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
                 <li><a class="smoothscroll" href="#info">About</a></li>
+               <%-- <li><a class="smoothscroll" href="#project">Lessons</a></li>
                 <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                <li><a class="smoothscroll" href="#project">Lessons</a></li>
+                <li><a class="smoothscroll" href="#project">Lessons</a></li>--%>
             </ul>
 					<!-- end #nav -->
 				</nav>
@@ -766,7 +766,7 @@ fieldset
                             <asp:TextBox ID="email" runat="server" name="email" placeholder="you@yourdomain.com" required="required" Width="295px" />
                         </div>
                         <div>
-                            &nbsp;<asp:Label ID="lblPassword" runat="server" style="font-size: small; font-weight: 700" Text="Password :">OTP <span class="required">*</span></asp:Label>
+                            &nbsp;<asp:Label ID="lblPassword" runat="server" style="font-size: small; font-weight: 700" Text="Password :">Password <span class="required">*</span></asp:Label>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
                             <asp:TextBox ID="txtPassword" runat="server" CausesValidation="True" required="required" TextMode="Password" Width="295px"></asp:TextBox>
                         </div>
@@ -796,40 +796,32 @@ fieldset
                     </div>
                 </section>
     </center>
-			<!-- Resume Section End-->
-			<!-- project Section
-				================================================== -->
-		
 			
-			
-
-           
-			<!-- footer
-				================================================== -->
-			<footer>
-                <div class="row">
+		    <footer>
+				<div class="row">
                     <div class="col-md-3">
-                        <h5 style="color:white">OrangeBoard</h5>
-                    </div>
+						<h5 style="color:white">Syracuse University</h5>
+					</div>
+                 	<div class="col-md-3" >
+						<h5 style="color:white">OrangeBoard@gmail.com</h5>
+					</div>
+					<div class="col-md-3">
+						<h5 style="color:white">Phone: +1.315.443.1870</h5>
+					</div>
                     <div class="col-md-3">
-                        <h5 style="color:white">Hello</h5>
-                    </div>
-                    <div class="col-md-3">
-                        <h5 style="color:white">SYRACUSE UNIVERSITY</h5>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="twelve columns">
-                        <ul class="social-links">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        </ul>
-                    </div>
-                    <div id="go-top">
-                        <a class="smoothscroll" href="#home" title="Back to Top"><i class="icon-up-open"></i></a>
-                    </div>
-                </div>
-    </footer>
+						<h5 style="color:white">Syracuse ,NY</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<ul class="social-links">
+							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						</ul>
+					</div>
+					<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+				</div>
+			</footer>
 
 			<!-- Footer End-->
 			<script type="text/javascript">

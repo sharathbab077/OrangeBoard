@@ -139,8 +139,6 @@
       <DependentUpon>OrangeBoard.mdf</DependentUpon>
     </Content>
     <Content Include="c1.aspx" />
-    <Content Include="c2.aspx" />
-    <Content Include="c3.aspx" />
     <Content Include="CareerServices.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -177,6 +175,7 @@
     <Content Include="css\materialize.min.css" />
     <Content Include="css\media-queries.css" />
     <Content Include="css\nextpage.css" />
+    <Content Include="DiscussionForum.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -269,12 +268,20 @@
     <Content Include="css\fonts\roboto\Roboto-Thin.woff" />
     <Content Include="css\fonts\roboto\Roboto-Thin.woff2" />
     <Content Include="homepage.aspx" />
+    <Content Include="images\board.jpg" />
     <Content Include="images\college.jpg" />
     <Content Include="images\complexitychecker.jpeg" />
+    <Content Include="images\discussionforum.jpg" />
+    <Content Include="images\greybackground.jpg" />
     <Content Include="images\otto.png" />
+    <Content Include="images\plag.jpeg" />
+    <Content Include="images\sms alerts.png" />
+    <Content Include="images\sms.jpg" />
+    <Content Include="images\text.jpg" />
     <Content Include="instructor.aspx" />
     <Content Include="js\contact form cevee.htnl" />
     <Content Include="js\index.js" />
+    <Content Include="PostComment.aspx" />
     <Content Include="register.aspx" />
     <Content Include="StudentCareerInfo.aspx" />
     <Content Include="studentcourse.aspx" />
@@ -353,26 +360,19 @@
     <Compile Include="c1.aspx.designer.cs">
       <DependentUpon>c1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="c2.aspx.cs">
-      <DependentUpon>c2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="c2.aspx.designer.cs">
-      <DependentUpon>c2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="c3.aspx.cs">
-      <DependentUpon>c3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="c3.aspx.designer.cs">
-      <DependentUpon>c3.aspx</DependentUpon>
-    </Compile>
     <Compile Include="CareerServices.aspx.cs">
       <DependentUpon>CareerServices.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CareerServices.aspx.designer.cs">
       <DependentUpon>CareerServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DiscussionForum.aspx.cs">
+      <DependentUpon>DiscussionForum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DiscussionForum.aspx.designer.cs">
+      <DependentUpon>DiscussionForum.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -390,6 +390,13 @@
     </Compile>
     <Compile Include="instructor.aspx.designer.cs">
       <DependentUpon>instructor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostComment.aspx.cs">
+      <DependentUpon>PostComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostComment.aspx.designer.cs">
+      <DependentUpon>PostComment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">

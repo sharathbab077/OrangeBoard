@@ -10,7 +10,7 @@
 namespace OrangeBoard {
     
     
-    public partial class c2 {
+    public partial class discussionForum {
         
         /// <summary>
         /// form2 control.
@@ -22,66 +22,57 @@ namespace OrangeBoard {
         protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
-        /// LinkButton1 control.
+        /// txbxTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Label txbxTitle;
         
         /// <summary>
-        /// ctwotxtarea control.
+        /// txbxAuthor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ctwotxtarea;
+        protected global::System.Web.UI.WebControls.TextBox txbxAuthor;
         
         /// <summary>
-        /// notifybtnc2 control.
+        /// txbxContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button notifybtnc2;
+        protected global::System.Web.UI.WebControls.TextBox txbxContent;
         
         /// <summary>
-        /// discc2btn control.
+        /// discussforumbtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button discc2btn;
+        protected global::System.Web.UI.WebControls.Button discussforumbtn;
         
         /// <summary>
-        /// FileUpload2 control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload2;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// c2btn control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button c2btn;
-        
-        /// <summary>
-        /// GridView2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

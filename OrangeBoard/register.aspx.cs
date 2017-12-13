@@ -24,8 +24,9 @@ namespace OrangeBoard
 
             SqlConnection con = new SqlConnection();
 
-            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "C:\\Users\\Mehal K Chaudhari\\Source\\Repos\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + @"E:\courses\sharath files\OrangeBoard\OrangeBoard\OrangeBoard\App_Data\OrangeBoard.mdf" + ";Integrated Security=True";
             con.Open();
+            //get studentId and phonenumber from RegisteredInfo table to verify user
             SqlDataAdapter da = new SqlDataAdapter("select StudentId,PhoneNumber from dbo.RegisteredInfo", con);
             DataSet ds = new DataSet();
             da.Fill(ds, "dbo.RegisteredInfo");
@@ -38,22 +39,17 @@ namespace OrangeBoard
 
             }
 
-            if (studentId.Exists(element => element == studId.Text) && phone.Exists(element => element == phoneNo.Text))
+            if (studentId.Exists(element => element == studId.Text) && phone.Exists(element => element == phoneNo.Text))//check if student exists in registeredInfo table if he exists then only he can register for this website
             {
-
-                SqlCommand myCommand = new SqlCommand("select Password from dbo.Password WHERE PhoneNumber='" + phoneNo.Text + "'", con);
-                string pswd = myCommand.ExecuteScalar().ToString();
-
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                if (pswd == txtPassword.Text)
-                {
+               //insert into table the restered students data
                     cmd.CommandText = "INSERT INTO dbo.Student values('" + studId.Text + "','" + phoneNo.Text + "','" + email.Text + "','" + zipcode.Text + "','" + name.Text + "','" + address.Text + "'); ";
                     cmd.ExecuteNonQuery();
                     con.Close();
                     Response.Redirect("homepage.aspx");
-                }
+                
             }
 
 

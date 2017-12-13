@@ -36,10 +36,10 @@
                <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
                <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
                <ul id="nav" class="nav">
-                  <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-                  <li><a class="smoothscroll" href="#info">About</a></li>
-                  <li><a class="smoothscroll" href="#resume">Lessons</a></li>
+                  <li> <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/homepage.aspx">Home</asp:HyperLink></li>
                   
+                <%--  <li><a class="smoothscroll" href="#resume">Lessons</a></li>--%>
+                  <li> <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/homepage.aspx">Logout</asp:HyperLink></li>
                </ul>
                <!-- end #nav -->
             </nav>
@@ -87,6 +87,11 @@
                   </div>
                </div>
                 </div>
+
+      
+             
+
+
              <div class="row work">
 
                <div class="three columns header-col">
@@ -97,7 +102,7 @@
                      <div class="twelve columns">
                          <asp:TextBox ID="c1txtarea" runat="server"></asp:TextBox>
                         
-                        <asp:Button ID="notifybtnc1" runat="server" Text="Notify" OnClick="notifybtnc1_Click" />
+                        <asp:Button ID="notifybtnc1" runat="server" Text="Notify" OnClick="sendmailadd" />
                      </div>
                   </div>
                </div>
@@ -110,7 +115,7 @@
                <div class="nine columns main-col">
                   <div class="row item">
                      <div class="twelve columns">
-                        <asp:Button ID="discc3btn" runat="server" Text="Discussions" />
+                        <asp:Button ID="discc3btn" runat="server" Text="Discussions" OnClick="discc3btn_Click" />
                      </div>
                   </div>
                </div>

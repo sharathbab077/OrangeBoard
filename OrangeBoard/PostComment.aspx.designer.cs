@@ -10,7 +10,7 @@
 namespace OrangeBoard {
     
     
-    public partial class c3 {
+    public partial class PostComment {
         
         /// <summary>
         /// form2 control.
@@ -22,57 +22,57 @@ namespace OrangeBoard {
         protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
-        /// cthreetxtarea control.
+        /// DetailsView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cthreetxtarea;
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
         
         /// <summary>
-        /// notifybtnc3 control.
+        /// GridViewcomment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button notifybtnc3;
+        protected global::System.Web.UI.WebControls.GridView GridViewcomment;
         
         /// <summary>
-        /// discc3btn control.
+        /// LabelNoComment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button discc3btn;
+        protected global::System.Web.UI.WebControls.Label LabelNoComment;
         
         /// <summary>
-        /// FileUpload3 control.
+        /// txbxcommentauthor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload3;
+        protected global::System.Web.UI.WebControls.TextBox txbxcommentauthor;
         
         /// <summary>
-        /// c3btn control.
+        /// txbxcomment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button c3btn;
+        protected global::System.Web.UI.WebControls.TextBox txbxcomment;
         
         /// <summary>
-        /// GridView3 control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView3;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

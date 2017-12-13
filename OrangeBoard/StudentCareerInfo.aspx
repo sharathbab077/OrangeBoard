@@ -164,11 +164,8 @@
                <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
                <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
                <ul id="nav" class="nav">
-                  <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-                  <li><a class="smoothscroll" href="#info">About</a></li>
-                  <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                  <li><a class="smoothscroll" href="#project">Lessons</a></li>
-                  <li><a class="smoothscroll" href="#project">Lessons</a></li>
+                  <li> <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/homepage.aspx">Home</asp:HyperLink></li>
+                  
                   <li id="hide" runat="server">  <a class="smoothscroll" href="StudentCareerInfo.aspx">Career Services form</a></li>
                </ul>
                <!-- end #nav -->

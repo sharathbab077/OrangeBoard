@@ -25,17 +25,18 @@ namespace OrangeBoard
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-4PPCII6\SQLEXPRESS;Initial Catalog=OrangeBoard;Integrated Security=True";
+            // con.ConnectionString= @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "F:\\3sem\\mehal125\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
+             con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + @"E:\courses\sharath files\OrangeBoard\OrangeBoard\OrangeBoard\App_Data\OrangeBoard.mdf" + ";Integrated Security=True";
             try
             {
-                string query = "SELECT PhoneNumber FROM dbo.StudentCareerInformation WHERE degree= '" + degree.Text + "' AND major = '" + major.Text + "' AND programmingLanguages= '" + programming.Text + "' AND workyears >= " + Exyears.Text + ";";
+                string query = "SELECT PhoneNumber FROM dbo.Student as s, dbo.StudentCareerInform as sc WHERE degree= '" + degree.Text + "' AND major = '" + major.Text + "' AND programmingLanguages= '" + programming.Text + "' AND workex >= " + Exyears.Text + " AND s.StudentId = sc.studId ;";
 
                 // Create a SqlCommand object and pass the constructor the connection string and the query string.
                 SqlCommand queryCommand = new SqlCommand(query, con);
 
                 con.Open();
 
-                ArrayList ar = new ArrayList();
+                ArrayList ar = new ArrayList();//arraylist for storing phone numbers of students
                 int i = 0;
                 using (SqlDataReader reader = queryCommand.ExecuteReader())
                 {
@@ -47,12 +48,9 @@ namespace OrangeBoard
                 }
                 string[] a = ar.ToArray(typeof(string)) as string[];
 
-                API api = new API("517b63d0706f907bdb548a4d8d6f49ba75b7b34b");
-
-                int l = a.Length;
-                //  Response.Write(l);
-                string b = message
-                    .Text;
+                API api = new API("517b63d0706f907bdb548a4d8d6f49ba75b7b34b");//get an api from clockworksms website for sending text messages
+                int l = a.Length;           
+                string b = message.Text;
                 for (i = 0; i < l; i++)
                 {
                     Response.Write(a[i] + " ");
@@ -75,19 +73,14 @@ namespace OrangeBoard
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-
-
             SqlConnection con = new SqlConnection();
-
-            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "C:\\Users\\Mehal K Chaudhari\\Source\\Repos\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
-            con.Open();
-
-
-
-
+            // con.ConnectionString= @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "F:\\3sem\\mehal125\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
+            // con.ConnectionString = @"" + "C:\\Users\\Mehal K Chaudhari\\Source\\Repos\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + @"E:\courses\sharath files\OrangeBoard\OrangeBoard\OrangeBoard\App_Data\OrangeBoard.mdf" + ";Integrated Security=True";
+            con.Open();            
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-
+           //for getting alumni recod according to any records like according to company,job position,etc or combination of those records
             int n = 0;
             cmd.CommandText = "Select * FROM dbo.AlumniRecord where ";
             if (!string.IsNullOrWhiteSpace(Aname.Text))
@@ -154,7 +147,7 @@ namespace OrangeBoard
                     result.Add(row["AlumniName"].ToString());
                 }
 
-            GridView2.DataSource = ds.Tables["dbo.AlumniRecord"];
+            GridView2.DataSource = ds.Tables["dbo.AlumniRecord"];//this gridview will show results of alumni records
             GridView2.DataBind();
         }
         }

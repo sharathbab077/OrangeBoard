@@ -18,9 +18,10 @@ namespace OrangeBoard
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-
-            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+"C:\\Users\\Mehal K Chaudhari\\Source\\Repos\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;"+"Integrated Security=True";
+            //  con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "F:\\3sem\\mehal125\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + @"E:\courses\sharath files\OrangeBoard\OrangeBoard\OrangeBoard\App_Data\OrangeBoard.mdf" + ";Integrated Security=True";
             con.Open();
+            /**load all data through session for displaying course information on course page like course Title,Location/classroom,day the class is conducted on*/
             string a = Session["suidValue"].ToString();
             SqlDataAdapter da = new SqlDataAdapter("select NumberOfCourses from dbo.Instructor where InstructorId='"+ Session["suidValue"].ToString() + "' ;", con);
             DataSet ds = new DataSet();
@@ -36,7 +37,7 @@ namespace OrangeBoard
             List<string> CourseDay= new List<string>();
             foreach (DataRow row in ds.Tables["dbo.Instructor"].Rows)
             {
-                suid.Add(row["NumberOfCourses"].ToString());
+                suid.Add(row["NumberOfCourses"].ToString());//get data from instructor table accroding to query
             }
             foreach (DataRow row in ds2.Tables["dbo.Course"].Rows)
             {
@@ -50,15 +51,13 @@ namespace OrangeBoard
             addhere.Controls.Add(br1);
             for (int i= 0;i<Int32.Parse(suid[0]);i++)
             {
-
-                Button b = new Button();
+                Button b = new Button();//for dynamically creating buttons according to courses instructor is teaching which are stored in database
                 b.ID = "button" + i;
                 b.Attributes.Add("onclick", "return true;");
                 b.Click += Button_Click;
                 b.CommandArgument = ""+i;
                 b.Attributes.Add("runat", "server");
                 b.Text = Courses[i].ToString();
-
                 addhere.Controls.Add(b);
                 System.Web.UI.HtmlControls.HtmlGenericControl br2 = new System.Web.UI.HtmlControls.HtmlGenericControl("BR");
                 addhere.Controls.Add(br2);
@@ -66,14 +65,13 @@ namespace OrangeBoard
                 Session["ctitle"+i] = Courses[i];
                 Session["clocation" + i] = CourseLocation[i];
                 Session["ctiming" + i] = CourseTiming[i];
-                Session["cday" + i] = CourseDay[i];
-              
+                Session["cday" + i] = CourseDay[i];             
             }
         }
 
         protected void Button_Click(object sender, EventArgs e)
         {
-            Button button = (Button)sender;
+            Button button = (Button)sender;//triggers onclick for dynamically created button
             Session["id"] = button.CommandArgument;
             string a = Session["id"].ToString();
            Response.Redirect("c1.aspx");

@@ -20,13 +20,9 @@ namespace OrangeBoard
         {
 
         }
-        protected void WorkAdd_Click(object sender, EventArgs e)
+        protected void WorkAdd_Click(object sender, EventArgs e)//for dynamically adding controls to add more work experience
         {
-            //System.Web.UI.HtmlControls.HtmlGenericControl lbl11 =
-            //                           new System.Web.UI.HtmlControls.HtmlGenericControl("Label");
-            //div1.Attributes.Add("class", "container");
-
-
+           
             System.Web.UI.HtmlControls.HtmlGenericControl div1 =
                                     new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
             div1.Attributes.Add("class", "five columns header-col");
@@ -159,16 +155,19 @@ namespace OrangeBoard
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-4PPCII6\SQLEXPRESS;Initial Catalog=OrangeBoard;Integrated Security=True";
-             con.Open();
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + @"E:\courses\sharath files\OrangeBoard\OrangeBoard\OrangeBoard\App_Data\OrangeBoard.mdf" + ";Integrated Security=True";
+            // con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + "F:\\3sem\\mehal125\\OrangeBoard\\OrangeBoard\\App_Data\\OrangeBoard.mdf;" + "Integrated Security=True";
+            con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "INSERT INTO StudentCareerInformation(StudId, degree, major, programmingLanguages, company, jobtitle, workyears, jobResponsibility, projtitle, projcompletiondate, technology, projresponsibility, phoneNumber) VALUES ('" + "287773263" + "','" + degree.Text + "','" + major.Text + "','" 
+            //insert into table StudentCareerInform for keeping track of experience/ new projects /new programming skills that student learns
+            cmd.CommandText = "INSERT INTO StudentCareerInform(studId, degree, major, programmingLanguages, Company, jobtitle, workex, jobResponsibility, projTitle, projectComplitionDate, projectTech, projResposibility) VALUES ('" + "287773263" + "','" + degree.Text + "','" + major.Text + "','" 
                 + programming.Text + "','" + Company.Text + "','" + jobTitle.Text + "','"+  Exyears.Text + "','" + jobResponsibility.Text +
                 "','"+ projectTitle.Text +"','" + projCompletionDate.Text + "','"+ technology.Text +  "','" 
-                + Projresponsibiity.Text+ "','" + "13159498758"+ "');";
+                + Projresponsibiity.Text+ "');";
                 cmd.ExecuteNonQuery();
                 con.Close();
+            Response.Redirect("studenthomepage.aspx");
         }
     }
 }
